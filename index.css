@@ -1,0 +1,228 @@
+/* Common stylings */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/background3.png);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.section{
+    margin-bottom: 7em;
+}
+.navbar {
+    text-align: center;
+}
+
+
+@font-face {
+    font-family: GreatVibes;
+    src: url("fonts/GreatVibes-Regular.ttf");
+}
+
+.navbar-brand{
+    font-family: GreatVibes;
+    font-size: 2rem !important;
+}
+
+.nav-item a{
+    color: black;
+}
+
+.nav-item{
+    margin: 0.5rem;
+}
+
+.nav-link:hover {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.5s;
+}
+
+.navactive{
+    background-color: #0d6efd;
+    color: white !important;
+    border-radius: 0.5rem;
+    transition: background-color 0.5s;
+}
+
+.carousel-icon-holder {
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+.social-media-icons img{
+    width: 5em;
+    height: 5em;
+}
+
+.social-media-icons img:hover{
+    transform: scale(1.2, 1.2);
+    transition: transform 0.5s;
+}
+
+.social-media-icons img {
+    width: 5em;
+    height: 5em;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.2, 1.2);
+    transition: transform 0.5s;
+}
+
+/* CSS for services section */
+
+.service-card{
+    height: 25rem;
+}
+.service-card h2{
+    padding: 10px; 
+}
+
+.service-card p{
+    padding: 10px;
+}
+
+.service-card a {
+    background-color: black;
+    color: white;
+    padding: 15px 20px; 
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+}
+
+.service-card:hover {
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.4s;
+}
+/* CSS for About us*/
+.aboutp{
+    font-size: 24px;
+}
+.img-thumbnail{
+    width: 100%;
+}
+
+/* CSS for Memberships */
+
+.membership{
+    width: 20rem;
+    margin-left: 0.3rem;
+}
+
+.membership-price {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.membership div ul {
+    list-style: none;
+    list-style-position: outside;
+    padding: 0;
+    margin: 0;
+}
+.badge{
+    background-color: red;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.membership div ul li {
+    margin: 10px
+}
+
+.membership div ul li img {
+    width: 1.5em;
+    margin-right: 10px;
+}
+
+.membership:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s;
+}
+.bronze{
+    background-color: #e6c8b6;
+}
+.gold{
+    background-color: #eee5b5;
+}
+.diamond{
+    background-color: #d7ecf4;
+}
+.platinum{
+    background-color: #e3e3e3;
+}
+
+/* CSS for FAQs */
+.accordion-button {
+    font-weight: 600;
+}
+
+.accordion .col h1 {
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+#faq-block {
+    margin: 5em auto;
+}
+
+#faqtitle, #aboutustitle, #membership-title, #servicestitle {
+    margin: 1em auto;
+    text-align: center;
+    width: fit-content;
+    color: #0b62e4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#faqtitle span, #aboutustitle span, #membership-title span, #servicestitle span{
+    display: block;
+    width: 50%;
+    border-bottom: 4px solid #0d6efd;
+    margin: 0.3em auto;
+}
+
+.faqimg img {
+    width: 90%;
+}
+
+/* CSS for Footer */
+#footer {
+    background-color: #08e4ff;
+    margin-top: 50px;
+    padding: 80px;
+}
+
+/* CSS for subscribe form */
+#subscribe-form{
+    background-color: #e7f1ff;
+    border-radius: 1rem;
+}
+
+.membership-plan-select{
+    display: none;
+}

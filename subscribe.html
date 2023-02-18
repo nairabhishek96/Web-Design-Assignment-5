@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe</title>
+
+  <link rel="icon"  href="images/favicon.ico"> 
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="index.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #08e4ff;">
+    <a href="#" class="navbar-brand mx-5">
+      Practo
+    </a>
+    <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navactive" href="./subscribe.html">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <a class="nav-link p-sm-2" href="#">Sign Up</a>
+        <button class="btn btn-primary mx-sm-3 mt-3 mt-sm-0 login-btn">
+          Login
+        </button>
+      </div>
+  </nav>
+  <main>
+    <div class="row justify-content-center my-5 form-container">
+      <div class="col-10 col-sm-6">
+        <form id="subscribe-form" class="needs-validation px-5 py-5" novalidate>
+          <h1 class="text-center mb-3">Subscription Form</h1>
+          <div class="form-group">
+            <label for="name">Name*</label>
+            <input type="text" class="form-control" id="name" placeholder="First name Last name">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter name in format: First name Last name
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="emailAddress">Email address*</label>
+            <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter name in format: name@example.com
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone number*</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="xxx-xxx-xxxx">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter phone number in format: xxx-xxx-xxxx
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address1">Address 1*</label>
+            <input type="text" class="form-control" id="address1" placeholder="Street number, Street name">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter address in format: Street number and Street name
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address2">Address 2*</label>
+            <input type="text" class="form-control" id="address2" placeholder="Apartment or Unit name/number">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter address in format: Apartment or Unit number
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="individualMembership">Subscription Type: </label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="subscriptionType" id="individualMembership"
+                value="individual" required>
+              <label class="form-check-label" for="individualMembership">Individual</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="subscriptionType" id="familyMembership" value="family">
+              <label class="form-check-label" for="familyMembership">Family</label>
+            </div>
+            <button type="button" class="btn btn-primary corporate-button">Corporate Plans?</button>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+              <div id="liveToast" class="toast hide corporate-toast" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="toast-header">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Square_blue.svg" class="rounded me-2"
+                    alt="Blue square image" style="width: 1rem; height:1rem;">
+                  <strong class="me-auto">Practo</strong>
+                  <small>2s ago</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  Please contact us at <b>corporate@practo.com</b> for more details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group membership-plan-select">
+            <label for="membershipPlanSelect">Subscription Plan: </label>
+            <select class="form-control" id="membershipPlanSelect">
+            </select>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please select atleast one plan
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div class="row container-fluid justify-content-evenly" id="footer">
+    <div class="col-lg-3">
+      <h2 class="navbar-brand">Practo</h2>
+      <hr>
+      <p>Practo is the distribution of health-related services and information via electronic
+        information and telecommunication technologies. It allows long-distance patient and
+        clinician contact, care, advice, reminders, education, intervention, monitoring, and remote
+        admissions</p>
+    </div>
+    <div class="col-lg-2">
+      <h2>Subscriptions</h2>
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item">Personal Plan
+          <ul class="list-group">
+            <li class="list-group-item"><a href="./subscribe.html">Bronze</a></li>
+            <li class="list-group-item"><a href="./subscribe.html">Gold</a></li>
+            <li class="list-group-item"><a href="./subscribe.html">Diamond</a></li>
+            <li class="list-group-item"><a href="./subscribe.html">Platinum</a></li>
+          </ul>
+        </li>
+        <li class="list-group-item">Family Plan
+          <ul class="list-group">
+            <li class="list-group-item"><a href="./subscribe.html">Basic</a></li>
+            <li class="list-group-item"><a href="./subscribe.html">Premium</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-2">
+      <h2>Useful Links</h2>
+      <hr>
+      <ul  class="list-group">
+        <li class="list-group-item"><a href="./index.html">Home</a></li>
+        <li class="list-group-item"><a href="./subscribe.html">Subscribe</a></li>
+        <li class="list-group-item"><a href="#">Contact Us</a></li>
+        <li class="list-group-item"><a href="#">Enroll as a Doctor</a></li>
+        <li class="list-group-item"><a href="#">Login</a></li>
+        <li class="list-group-item"><a href="#">Signup</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3">
+      <h2>Subscribe to our Newsletter</h2>
+      <hr>
+      <form id="newsletter-form">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">
+            Email address &nbsp;
+            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+              title="We'll never share your email with anyone else. Email is only used for sending brand new information about our tools and services">
+              ?
+            </button>
+          </label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            pattern="^[a-zA-Z0-9]+@\\w+.\\w{1,3}$" required>
+
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submit-button">
+          Submit
+        </button>
+        <div class="modal fade" id="submit-button" tabindex="-1" aria-labelledby="submit-buttonLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="submit-buttonLabel">News letter</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Successfully subscribed to our news letter.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
